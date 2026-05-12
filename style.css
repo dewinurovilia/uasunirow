@@ -777,3 +777,12 @@ font-size:22px;
 }
 
 }
+.about-image img{
+width:100%;
+max-width:300px;
+height:auto;
+object-fit:cover;
+border-radius:20px;
+display:block;
+margin:auto;
+}
