@@ -928,3 +928,8 @@ border-radius:20px;
 display:block;
 margin:auto;
 }
+/* TARUH PALING BAWAH DI style.css */
+
+.stats-section{
+padding-top:120px;
+}
