@@ -8,21 +8,180 @@
 
 <title>Filosofi Mengajar</title>
 
-<!-- CSS -->
 <link rel="stylesheet" href="style.css">
 
-<!-- ICON -->
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- AOS -->
+<link rel="stylesheet"
+href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
+
+<!-- Animate CSS -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+<style>
+
+html{
+scroll-behavior:smooth;
+}
+
+/* NAVBAR */
+.navbar{
+animation:slideDown 1s ease;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.navbar a{
+position:relative;
+transition:0.3s;
+}
+
+.navbar a:hover{
+color:#ffd700;
+transform:translateY(-3px);
+}
+
+.navbar a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-5px;
+width:0;
+height:2px;
+background:#ffd700;
+transition:0.4s;
+}
+
+.navbar a:hover::after{
+width:100%;
+}
+
+/* HERO */
+.hero-content h1{
+animation:fadeInDown 1s ease;
+}
+
+.hero-content p{
+animation:fadeInUp 1.5s ease;
+}
+
+/* BOX */
+.refleksi-box{
+background:white;
+padding:35px;
+border-radius:20px;
+margin-bottom:30px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:0.5s;
+line-height:1.8;
+}
+
+.refleksi-box:hover{
+transform:translateY(-10px);
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.refleksi-box h2{
+color:#0d47a1;
+margin-bottom:20px;
+}
+
+/* FOOTER */
+footer{
+background:#0d47a1;
+color:white;
+padding:50px 10%;
+margin-top:50px;
+}
+
+.footer-content{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.footer-box h3{
+margin-bottom:20px;
+}
+
+.footer-box p{
+line-height:1.8;
+}
+
+.footer-box a{
+color:white;
+text-decoration:none;
+}
+
+.social{
+display:flex;
+gap:15px;
+margin-top:15px;
+}
+
+.social a{
+width:40px;
+height:40px;
+background:white;
+color:#0d47a1;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+}
+
+.copyright{
+text-align:center;
+margin-top:40px;
+padding-top:20px;
+border-top:1px solid rgba(255,255,255,0.3);
+}
+
+/* ANIMATION */
+@keyframes slideDown{
+from{
+transform:translateY(-100%);
+opacity:0;
+}
+to{
+transform:translateY(0);
+opacity:1;
+}
+}
+
+@keyframes fadeInDown{
+from{
+opacity:0;
+transform:translateY(-30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes fadeInUp{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+</style>
 
 </head>
 
 <body>
 
-<!-- =========================
-NAVBAR
-========================= -->
-
+<!-- NAVBAR -->
 <nav class="navbar">
 
 <div class="nav-container">
@@ -35,7 +194,7 @@ E-Portofolio
 
 <div class="menu">
 
-<a href="index.html" class="active">Home</a>
+<a href="index.html">Home</a>
 
 <a href="profil.html">Profil</a>
 
@@ -47,7 +206,7 @@ E-Portofolio
 
 <a href="umpanbalik.html">Umpan Balik</a>
 
-<a href="filosofi.html">Filosofi Mengajar</a>
+<a href="filosofi.html" class="active">Filosofi Mengajar</a>
 
 <a href="kontak.html">Kontak</a>
 
@@ -57,310 +216,103 @@ E-Portofolio
 
 </nav>
 
-<!-- =========================
-HERO
-========================= -->
-
-<section class="hero">
+<!-- HERO -->
+<section class="hero small-hero" data-aos="fade-up">
 
 <div class="hero-overlay"></div>
 
 <div class="hero-content">
 
-<span class="hero-badge">
-<i class="fa-solid fa-graduation-cap"></i>
-Program Pendidikan Profesi Guru
-</span>
+<h1 class="animate__animated animate__fadeInDown">
+FILOSOFI MENGAJAR
+</h1>
 
-<h1>Filosofi Mengajar</h1>
+<p class="animate__animated animate__fadeInUp">
 
-<p>Halaman filosofi mengajar</p>
+Pandangan dan pemahaman mengenai proses pembelajaran, peran guru, dan tujuan pendidikan.
 
-<div class="hero-buttons">
-
-<a href="profil.html" class="hero-btn">
-
-<i class="fa-solid fa-user"></i>
-
-Lihat Profil
-
-</a>
-
-<a href="artefak.html" class="hero-btn secondary-btn">
-
-<i class="fa-solid fa-book-open"></i>
-
-Lihat Artefak
-
-</a>
-
-</div>
+</p>
 
 </div>
 
 </section>
 
-<!-- =========================
-STATISTIK
-========================= -->
-
-<section class="stats-section">
-
-<div class="stats-container">
-
-<div class="stats-box">
-
-<h2>6+</h2>
-
-<p>
-Artefak Pembelajaran
-</p>
-
-</div>
-
-<div class="stats-box">
-
-<h2>100%</h2>
-
-<p>
-Pembelajaran Aktif
-</p>
-
-</div>
-
-<div class="stats-box">
-
-<h2>PPG</h2>
-
-<p>
-Profesional & Inovatif
-</p>
-
-</div>
-
-<div class="stats-box">
-
-<h2>2026</h2>
-
-<p>
-E-Portfolio Digital
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- =========================
-TENTANG
-========================= -->
-
+<!-- ISI -->
 <section class="container">
 
-<div class="section-title">
+<div class="refleksi-box" data-aos="fade-right">
 
 <h2>
-Tentang E-Portfolio
+Bagaimana Proses Belajar Seharusnya Berlangsung
 </h2>
 
 <p>
 
-Media dokumentasi digital yang menampilkan perjalanan,
-pengalaman, dan pengembangan kompetensi selama Program PPG.
+Menurut saya, proses belajar seharusnya berlangsung secara aktif, menyenangkan, dan berpusat pada peserta didik. Dalam pembelajaran, peserta didik tidak hanya mendengarkan penjelasan guru, tetapi juga diberikan kesempatan untuk bertanya, berdiskusi, mencoba, dan menyampaikan pendapat. Proses belajar yang baik akan membuat peserta didik merasa nyaman sehingga mereka lebih mudah memahami materi dan berani terlibat dalam kegiatan pembelajaran.
 
 </p>
 
 </div>
 
-<div class="about-grid">
+<div class="refleksi-box" data-aos="fade-left">
 
-<div class="about-image">
-
-<img src="img/profil.jpg" alt="Profil">
-
-</div>
-
-<div class="about-content">
-
-<h3>
-PPG Sebagai Langkah Menjadi Guru Profesional
-</h3>
+<h2>
+Peran Guru
+</h2>
 
 <p>
 
-Program Pendidikan Profesi Guru membantu calon guru
-mengembangkan kompetensi pedagogik, profesional,
-sosial, dan kepribadian melalui pembelajaran inovatif.
+Bagi saya, guru bukan hanya sebagai penyampai materi, tetapi juga sebagai fasilitator, pembimbing, dan motivator bagi peserta didik. Guru memiliki peran penting dalam menciptakan suasana belajar yang positif, membimbing peserta didik sesuai kebutuhannya, serta memberikan contoh sikap yang baik. Selain itu, guru juga harus mampu menyesuaikan metode pembelajaran dengan karakter peserta didik agar tujuan pembelajaran dapat tercapai dengan baik.
 
 </p>
+
+</div>
+
+<div class="refleksi-box" data-aos="fade-right">
+
+<h2>
+Peran Peserta Didik
+</h2>
 
 <p>
 
-Melalui website ini berbagai dokumentasi pembelajaran,
-video, refleksi, dan hasil karya peserta didik
-ditampilkan secara modern dan interaktif.
+Peserta didik memiliki peran penting dalam proses pembelajaran, yaitu sebagai subjek utama dalam kegiatan belajar. Peserta didik diharapkan aktif mengikuti pembelajaran, berani bertanya, bekerja sama, serta memiliki rasa ingin tahu yang tinggi. Dengan keterlibatan aktif peserta didik, proses pembelajaran akan menjadi lebih bermakna dan membantu mereka mengembangkan potensi yang dimiliki.
 
 </p>
 
-<a href="profil.html" class="btn">
+</div>
 
-<i class="fa-solid fa-arrow-right"></i>
+<div class="refleksi-box" data-aos="fade-left">
 
-Selengkapnya
+<h2>
+Tujuan Pendidikan
+</h2>
 
-</a>
+<p>
+
+Menurut saya, tujuan pendidikan tidak hanya untuk meningkatkan kemampuan akademik peserta didik, tetapi juga membentuk karakter, sikap, dan keterampilan yang baik dalam kehidupan sehari-hari. Pendidikan diharapkan mampu menciptakan peserta didik yang memiliki pengetahuan, keterampilan, rasa tanggung jawab, disiplin, serta mampu berpikir kritis dan kreatif sesuai dengan nilai-nilai Profil Pelajar Pancasila.
+
+</p>
 
 </div>
+
+<div class="refleksi-box" data-aos="zoom-in">
+
+<h2>
+Cara Menciptakan Pembelajaran yang Baik
+</h2>
+
+<p>
+
+Pembelajaran yang baik dapat tercipta apabila guru mampu menciptakan suasana kelas yang nyaman, aktif, dan menyenangkan. Guru perlu menggunakan metode dan media pembelajaran yang bervariasi agar peserta didik tidak mudah bosan dan lebih mudah memahami materi. Selain itu, komunikasi yang baik antara guru dan peserta didik, pemberian motivasi, serta penghargaan terhadap pendapat peserta didik juga sangat penting untuk mendukung keberhasilan proses pembelajaran.
+
+</p>
 
 </div>
 
 </section>
 
-<!-- =========================
-FITUR
-========================= -->
-
-<section class="feature-section">
-
-<div class="section-title white-title">
-
-<h2>
-Keunggulan Pembelajaran
-</h2>
-
-<p>
-
-Implementasi pembelajaran aktif, inovatif,
-dan kolaboratif selama Program PPG.
-
-</p>
-
-</div>
-
-<div class="feature-grid">
-
-<div class="feature-card">
-
-<i class="fa-solid fa-lightbulb"></i>
-
-<h3>Inovatif</h3>
-
-<p>
-Menggunakan model pembelajaran modern berbasis masalah.
-</p>
-
-</div>
-
-<div class="feature-card">
-
-<i class="fa-solid fa-users"></i>
-
-<h3>Kolaboratif</h3>
-
-<p>
-Peserta didik aktif bekerja sama dalam kelompok belajar.
-</p>
-
-</div>
-
-<div class="feature-card">
-
-<i class="fa-solid fa-chart-line"></i>
-
-<h3>Interaktif</h3>
-
-<p>
-Media pembelajaran interaktif dan menyenangkan.
-</p>
-
-</div>
-
-<div class="feature-card">
-
-<i class="fa-solid fa-medal"></i>
-
-<h3>Profesional</h3>
-
-<p>
-Mengembangkan kompetensi guru profesional masa depan.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- =========================
-GALERI
-========================= -->
-
-<section class="container">
-
-<div class="section-title">
-
-<h2>
-Galeri Pembelajaran
-</h2>
-
-<p>
-
-Dokumentasi kegiatan pembelajaran dan praktik mengajar.
-
-</p>
-
-</div>
-
-<div class="gallery-grid">
-
-<img src="img/siklus1.jpg">
-
-<img src="img/siklus2.jpg">
-
-<img src="img/hasil-kerja-siswa.jpg">
-
-<img src="img/video-pembelajaran.jpg">
-
-</div>
-
-</section>
-
-<!-- =========================
-CTA
-========================= -->
-
-<section class="cta-section">
-
-<div class="cta-box">
-
-<h2>
-Mari Jelajahi E-Portfolio PPG
-</h2>
-
-<p>
-
-Lihat dokumentasi pembelajaran, artefak,
-dan pengembangan kompetensi guru profesional.
-
-</p>
-
-<a href="profil.html" class="hero-btn">
-
-<i class="fa-solid fa-book-open"></i>
-
-Mulai Jelajahi
-
-</a>
-
-</div>
-
-</section>
-
-<!-- =========================
-FOOTER
-========================= -->
-
+<!-- FOOTER -->
 <footer>
 
 <div class="footer-content">
@@ -384,9 +336,9 @@ yang menampilkan pembelajaran inovatif dan pengembangan kompetensi guru.
 
 <p><a href="profil.html">Profil</a></p>
 
-<p><a href="artefak.html">Artefak</a></p>
+<p><a href="pembelajaran.html">Pembelajaran</a></p>
 
-<p><a href="lampiran.html">Lampiran</a></p>
+<p><a href="pengalaman.html">Pengalaman</a></p>
 
 <p><a href="kontak.html">Kontak</a></p>
 
@@ -427,6 +379,18 @@ yang menampilkan pembelajaran inovatif dan pengembangan kompetensi guru.
 </div>
 
 </footer>
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+
+AOS.init({
+duration:1200,
+once:false
+});
+
+</script>
 
 </body>
 
