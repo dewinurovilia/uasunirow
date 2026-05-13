@@ -1,15 +1,138 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Refleksi Akhir</title>
 
 <link rel="stylesheet" href="style.css">
 
+<!-- AOS -->
+<link rel="stylesheet"
+href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
+
+<!-- Animate CSS -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+<style>
+
+html{
+scroll-behavior:smooth;
+}
+
+/* NAVBAR */
+.navbar{
+animation:slideDown 1s ease;
+transition:0.4s;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.navbar a{
+position:relative;
+transition:0.3s;
+}
+
+.navbar a:hover{
+color:#ffd700;
+transform:translateY(-3px);
+}
+
+.navbar a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-5px;
+width:0;
+height:2px;
+background:#ffd700;
+transition:0.4s;
+}
+
+.navbar a:hover::after{
+width:100%;
+}
+
+/* HERO */
+.hero-content h1{
+animation:fadeInDown 1s ease;
+}
+
+.hero-content p{
+animation:fadeInUp 1.5s ease;
+}
+
+/* QUOTE */
+.quote-box{
+background:white;
+padding:40px;
+border-radius:20px;
+font-size:20px;
+line-height:1.8;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:0.5s;
+}
+
+.quote-box:hover{
+transform:translateY(-10px);
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.quote-box h2{
+text-align:center;
+margin-bottom:30px;
+}
+
+.quote-box h3{
+margin-top:30px;
+color:#0d47a1;
+}
+
+/* ANIMATION */
+@keyframes slideDown{
+from{
+transform:translateY(-100%);
+opacity:0;
+}
+to{
+transform:translateY(0);
+opacity:1;
+}
+}
+
+@keyframes fadeInDown{
+from{
+opacity:0;
+transform:translateY(-30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes fadeInUp{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+</style>
+
 </head>
+
 <body>
 
+<!-- NAVBAR -->
 <nav class="navbar">
 
 <div class="nav-container">
@@ -44,33 +167,102 @@ E-Portofolio
 
 </nav>
 
-<section class="hero small-hero">
+<!-- HERO -->
+<section class="hero small-hero" data-aos="fade-up">
 
 <div class="hero-overlay"></div>
 
 <div class="hero-content">
 
-<h1>REFLEKSI AKHIR</h1>
+<h1 class="animate__animated animate__fadeInDown">
+REFLEKSI AKHIR
+</h1>
 
-<p>
+<p class="animate__animated animate__fadeInUp">
+
 Refleksi akhir merupakan bentuk evaluasi diri terhadap proses pembelajaran dan pengalaman selama mengikuti Program Pendidikan Profesi Guru.
+
 Melalui kegiatan ini, peserta dapat memahami perkembangan kompetensi pedagogik, profesional, sosial,
 dan kepribadian yang telah dicapai serta menentukan langkah perbaikan untuk menjadi guru profesional yang lebih baik.
+
 </p>
 
 </div>
 
 </section>
 
-<section class="container">
+<!-- REFLEKSI -->
+<section class="container" data-aos="fade-up">
 
 <div class="quote-box">
 
-“Guru hebat adalah guru yang mampu menginspirasi masa depan.”
+<h2>
+Refleksi Pengalaman PPL
+</h2>
+
+<h3>1. Pengalaman selama PPL</h3>
+
+<p>
+
+Selama melaksanakan kegiatan PPL di UPT SDN Kutorejo I Tuban, saya mendapatkan banyak pengalaman dan pembelajaran yang sangat berharga dalam dunia pendidikan. Saya belajar secara langsung bagaimana menjadi seorang guru yang tidak hanya menyampaikan materi pembelajaran, tetapi juga membimbing, mengarahkan, dan memahami karakter peserta didik yang beragam. Dalam proses pembelajaran, saya mencoba menerapkan pembelajaran sesuai Kurikulum Merdeka dengan menggunakan media pembelajaran dan kegiatan yang membuat peserta didik lebih aktif serta antusias saat belajar.
+
+</p>
+
+<h3>2. Hal yang sudah berkembang</h3>
+
+<p>
+
+Selama kegiatan PPL berlangsung, kemampuan saya dalam menyusun perangkat pembelajaran, mengelola kelas, dan menyampaikan materi mengalami perkembangan yang cukup baik. Saya menjadi lebih percaya diri ketika mengajar di depan kelas dan lebih memahami cara menciptakan suasana belajar yang menyenangkan bagi peserta didik sekolah dasar. Selain itu, kemampuan komunikasi dan kerja sama saya dengan guru pamong, peserta didik, dan warga sekolah juga semakin berkembang.
+
+</p>
+
+<h3>3. Kendala atau tantangan</h3>
+
+<p>
+
+Dalam pelaksanaan PPL di UPT SDN Kutorejo I Tuban, saya mengalami beberapa tantangan, seperti kondisi kelas yang terkadang kurang kondusif, perbedaan kemampuan peserta didik dalam memahami materi, dan masih adanya peserta didik yang kurang aktif saat pembelajaran berlangsung. Selain itu, pengelolaan waktu saat mengajar juga menjadi tantangan agar seluruh kegiatan pembelajaran dapat berjalan sesuai rencana.
+
+</p>
+
+<h3>4. Upaya mengatasi kendala</h3>
+
+<p>
+
+Untuk mengatasi kendala tersebut, saya berusaha menggunakan metode pembelajaran yang lebih variatif dan menyenangkan, seperti diskusi kelompok, permainan edukatif, dan penggunaan media pembelajaran interaktif agar peserta didik lebih fokus dan aktif dalam belajar. Saya juga melakukan pendekatan kepada peserta didik yang kurang aktif serta meminta saran dan arahan dari guru pamong mengenai cara mengelola kelas dan menyampaikan pembelajaran dengan lebih baik.
+
+</p>
+
+<h3>5. Harapan / rencana ke depan</h3>
+
+<p>
+
+Melalui kegiatan PPL di UPT SDN Kutorejo I Tuban ini, saya berharap dapat terus meningkatkan kompetensi dan pengalaman sebagai calon guru profesional. Ke depannya, saya ingin menjadi guru yang kreatif, inovatif, sabar, dan mampu menciptakan pembelajaran yang menyenangkan sesuai dengan kebutuhan peserta didik. Saya juga berharap dapat terus mengembangkan kemampuan dalam memanfaatkan teknologi pembelajaran agar proses belajar menjadi lebih efektif dan menarik di era Kurikulum Merdeka.
+
+</p>
 
 </div>
 
 </section>
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+
+AOS.init({
+duration:1200,
+once:false
+});
+
+window.addEventListener("scroll",function(){
+
+const navbar=document.querySelector(".navbar");
+
+navbar.classList.toggle("sticky",window.scrollY>50);
+
+});
+
+</script>
 
 </body>
 </html>
