@@ -15,14 +15,125 @@
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+<!-- AOS -->
+<link rel="stylesheet"
+href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
+
+<!-- Animate CSS -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+<style>
+
+html{
+scroll-behavior:smooth;
+}
+
+/* NAVBAR */
+.navbar{
+animation:slideDown 1s ease;
+transition:0.4s;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.navbar a{
+position:relative;
+transition:0.3s;
+}
+
+.navbar a:hover{
+color:#ffd700;
+transform:translateY(-3px);
+}
+
+.navbar a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-5px;
+width:0;
+height:2px;
+background:#ffd700;
+transition:0.4s;
+}
+
+.navbar a:hover::after{
+width:100%;
+}
+
+/* HERO */
+.hero-content h1{
+animation:fadeInDown 1s ease;
+}
+
+.hero-content p{
+animation:fadeInUp 1.5s ease;
+}
+
+/* BOX PEMBELAJARAN */
+.refleksi-box{
+background:white;
+padding:35px;
+border-radius:20px;
+margin-bottom:30px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:0.5s;
+line-height:1.8;
+}
+
+.refleksi-box:hover{
+transform:translateY(-10px);
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.refleksi-box h2{
+color:#0d47a1;
+margin-bottom:20px;
+}
+
+/* ANIMATION */
+@keyframes slideDown{
+from{
+transform:translateY(-100%);
+opacity:0;
+}
+to{
+transform:translateY(0);
+opacity:1;
+}
+}
+
+@keyframes fadeInDown{
+from{
+opacity:0;
+transform:translateY(-30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes fadeInUp{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+</style>
+
 </head>
 
 <body>
 
-<!-- =========================
-NAVBAR
-========================= -->
-
+<!-- NAVBAR -->
 <nav class="navbar">
 
 <div class="nav-container">
@@ -35,13 +146,15 @@ E-Portofolio
 
 <div class="menu">
 
-<a href="index.html" class="active">Home</a>
+<a href="index.html">Home</a>
 
 <a href="profil.html">Profil</a>
 
 <a href="refleksi.html">Refleksi Akhir</a>
 
-<a href="pembelajaran.html">Pembelajaran Yang diperoleh</a>
+<a href="pembelajaran.html" class="active">
+Pembelajaran Yang diperoleh
+</a>
 
 <a href="pengalaman.html">Pengalaman</a>
 
@@ -57,376 +170,171 @@ E-Portofolio
 
 </nav>
 
-<!-- =========================
-HERO
-========================= -->
-
-<section class="hero">
+<!-- HERO -->
+<section class="hero small-hero" data-aos="fade-up">
 
 <div class="hero-overlay"></div>
 
 <div class="hero-content">
 
-<span class="hero-badge">
-<i class="fa-solid fa-graduation-cap"></i>
-Program Pendidikan Profesi Guru
-</span>
+<h1 class="animate__animated animate__fadeInDown">
+PEMBELAJARAN YANG DIPEROLEH
+</h1>
 
-<h1>Pembelajaran</h1>
+<p class="animate__animated animate__fadeInUp">
 
-<p>Halaman pembelajaran</p>
+Berbagai pengalaman dan pembelajaran yang diperoleh selama melaksanakan Program Pendidikan Profesi Guru (PPG).
 
-<div class="hero-buttons">
-
-<a href="profil.html" class="hero-btn">
-
-<i class="fa-solid fa-user"></i>
-
-Lihat Profil
-
-</a>
-
-<a href="artefak.html" class="hero-btn secondary-btn">
-
-<i class="fa-solid fa-book-open"></i>
-
-Lihat Artefak
-
-</a>
-
-</div>
+</p>
 
 </div>
 
 </section>
 
-<!-- =========================
-STATISTIK
-========================= -->
-
-<section class="stats-section">
-
-<div class="stats-container">
-
-<div class="stats-box">
-
-<h2>6+</h2>
-
-<p>
-Artefak Pembelajaran
-</p>
-
-</div>
-
-<div class="stats-box">
-
-<h2>100%</h2>
-
-<p>
-Pembelajaran Aktif
-</p>
-
-</div>
-
-<div class="stats-box">
-
-<h2>PPG</h2>
-
-<p>
-Profesional & Inovatif
-</p>
-
-</div>
-
-<div class="stats-box">
-
-<h2>2026</h2>
-
-<p>
-E-Portfolio Digital
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- =========================
-TENTANG
-========================= -->
-
+<!-- ISI PEMBELAJARAN -->
 <section class="container">
 
-<div class="section-title">
+<!-- BOX 1 -->
+<div class="refleksi-box" data-aos="fade-right">
 
 <h2>
-Tentang E-Portfolio
+Cara Mengelola Kelas
 </h2>
 
 <p>
 
-Media dokumentasi digital yang menampilkan perjalanan,
-pengalaman, dan pengembangan kompetensi selama Program PPG.
+Selama kegiatan PPL, saya belajar bagaimana cara mengelola kelas agar suasana pembelajaran tetap kondusif dan peserta didik dapat mengikuti pembelajaran dengan baik. Saya memahami bahwa guru harus mampu mengatur perhatian peserta didik, memberikan arahan yang jelas, serta menciptakan suasana belajar yang nyaman dan menyenangkan agar peserta didik lebih fokus saat belajar.
 
 </p>
 
 </div>
 
-<div class="about-grid">
+<!-- BOX 2 -->
+<div class="refleksi-box" data-aos="fade-left">
 
-<div class="about-image">
-
-<img src="img/profil.jpg" alt="Profil">
-
-</div>
-
-<div class="about-content">
-
-<h3>
-PPG Sebagai Langkah Menjadi Guru Profesional
-</h3>
+<h2>
+Cara Menghadapi Karakter Peserta Didik yang Berbeda
+</h2>
 
 <p>
 
-Program Pendidikan Profesi Guru membantu calon guru
-mengembangkan kompetensi pedagogik, profesional,
-sosial, dan kepribadian melalui pembelajaran inovatif.
+Dalam kegiatan pembelajaran, saya menyadari bahwa setiap peserta didik memiliki karakter dan kemampuan yang berbeda-beda. Ada peserta didik yang aktif, pendiam, cepat memahami materi, maupun yang memerlukan pendampingan lebih. Dari pengalaman tersebut, saya belajar untuk lebih sabar dan mencoba menggunakan pendekatan yang berbeda sesuai kebutuhan peserta didik agar mereka tetap merasa diperhatikan selama proses pembelajaran.
 
 </p>
+
+</div>
+
+<!-- BOX 3 -->
+<div class="refleksi-box" data-aos="fade-right">
+
+<h2>
+Pengalaman Menyusun Perangkat Pembelajaran
+</h2>
 
 <p>
 
-Melalui website ini berbagai dokumentasi pembelajaran,
-video, refleksi, dan hasil karya peserta didik
-ditampilkan secara modern dan interaktif.
+Selama PPL, saya memperoleh pengalaman dalam menyusun perangkat pembelajaran seperti modul ajar, media pembelajaran, LKPD, dan asesmen. Saya belajar bahwa perangkat pembelajaran harus disusun dengan baik agar tujuan pembelajaran dapat tercapai dan kegiatan belajar menjadi lebih terarah sesuai dengan Kurikulum Merdeka.
 
 </p>
 
-<a href="profil.html" class="btn">
+</div>
 
-<i class="fa-solid fa-arrow-right"></i>
+<!-- BOX 4 -->
+<div class="refleksi-box" data-aos="fade-left">
 
-Selengkapnya
+<h2>
+Penerapan Kurikulum Merdeka
+</h2>
 
-</a>
+<p>
+
+Melalui kegiatan PPL, saya belajar menerapkan pembelajaran sesuai Kurikulum Merdeka yang berpusat pada peserta didik. Dalam pembelajaran, saya mencoba memberikan kegiatan yang membuat peserta didik lebih aktif, seperti diskusi, kerja kelompok, dan penggunaan media pembelajaran interaktif. Saya juga belajar pentingnya pembelajaran berdiferensiasi sesuai kemampuan dan kebutuhan peserta didik.
+
+</p>
 
 </div>
+
+<!-- BOX 5 -->
+<div class="refleksi-box" data-aos="fade-right">
+
+<h2>
+Pentingnya Komunikasi dengan Guru dan Peserta Didik
+</h2>
+
+<p>
+
+Selama kegiatan PPL, saya belajar bahwa komunikasi yang baik sangat penting dalam proses pembelajaran maupun di lingkungan sekolah. Dengan komunikasi yang baik, saya dapat lebih mudah bekerja sama dengan guru pamong dan memahami kebutuhan peserta didik. Selain itu, komunikasi yang baik juga membantu menciptakan hubungan yang lebih dekat dan nyaman dengan peserta didik.
+
+</p>
+
+</div>
+
+<!-- BOX 6 -->
+<div class="refleksi-box" data-aos="fade-left">
+
+<h2>
+Penggunaan Media/Metode Pembelajaran
+</h2>
+
+<p>
+
+Saya belajar bahwa penggunaan media dan metode pembelajaran yang bervariasi dapat membuat peserta didik lebih tertarik dan aktif selama pembelajaran berlangsung. Oleh karena itu, saya mencoba menggunakan media pembelajaran seperti PPT, video pembelajaran, dan permainan edukatif agar peserta didik tidak mudah bosan dan lebih memahami materi yang diajarkan.
+
+</p>
+
+</div>
+
+<!-- BOX 7 -->
+<div class="refleksi-box" data-aos="fade-right">
+
+<h2>
+Sikap Disiplin, Tanggung Jawab, dan Profesionalisme Guru
+</h2>
+
+<p>
+
+Melalui kegiatan PPL, saya memahami bahwa seorang guru harus memiliki sikap disiplin, tanggung jawab, dan profesionalisme dalam menjalankan tugasnya. Guru harus datang tepat waktu, mempersiapkan pembelajaran dengan baik, serta memberikan contoh sikap yang baik kepada peserta didik. Pengalaman ini membuat saya lebih memahami pentingnya menjaga sikap dan etika sebagai calon guru profesional.
+
+</p>
+
+</div>
+
+<!-- BOX 8 -->
+<div class="refleksi-box" data-aos="zoom-in">
+
+<h2>
+Pentingnya Refleksi dan Evaluasi Pembelajaran
+</h2>
+
+<p>
+
+Selama PPL, saya belajar bahwa refleksi dan evaluasi pembelajaran sangat penting untuk mengetahui kekurangan dan kelebihan selama mengajar. Dari hasil refleksi tersebut, saya dapat memperbaiki cara mengajar, pengelolaan kelas, maupun penggunaan metode pembelajaran agar pembelajaran berikutnya dapat berjalan lebih baik dan tujuan pembelajaran dapat tercapai secara maksimal.
+
+</p>
 
 </div>
 
 </section>
 
-<!-- =========================
-FITUR
-========================= -->
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
-<section class="feature-section">
+<script>
 
-<div class="section-title white-title">
+AOS.init({
+duration:1200,
+once:false
+});
 
-<h2>
-Keunggulan Pembelajaran
-</h2>
+window.addEventListener("scroll",function(){
 
-<p>
+const navbar=document.querySelector(".navbar");
 
-Implementasi pembelajaran aktif, inovatif,
-dan kolaboratif selama Program PPG.
+navbar.classList.toggle("sticky",window.scrollY>50);
 
-</p>
+});
 
-</div>
-
-<div class="feature-grid">
-
-<div class="feature-card">
-
-<i class="fa-solid fa-lightbulb"></i>
-
-<h3>Inovatif</h3>
-
-<p>
-Menggunakan model pembelajaran modern berbasis masalah.
-</p>
-
-</div>
-
-<div class="feature-card">
-
-<i class="fa-solid fa-users"></i>
-
-<h3>Kolaboratif</h3>
-
-<p>
-Peserta didik aktif bekerja sama dalam kelompok belajar.
-</p>
-
-</div>
-
-<div class="feature-card">
-
-<i class="fa-solid fa-chart-line"></i>
-
-<h3>Interaktif</h3>
-
-<p>
-Media pembelajaran interaktif dan menyenangkan.
-</p>
-
-</div>
-
-<div class="feature-card">
-
-<i class="fa-solid fa-medal"></i>
-
-<h3>Profesional</h3>
-
-<p>
-Mengembangkan kompetensi guru profesional masa depan.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- =========================
-GALERI
-========================= -->
-
-<section class="container">
-
-<div class="section-title">
-
-<h2>
-Galeri Pembelajaran
-</h2>
-
-<p>
-
-Dokumentasi kegiatan pembelajaran dan praktik mengajar.
-
-</p>
-
-</div>
-
-<div class="gallery-grid">
-
-<img src="img/siklus1.jpg">
-
-<img src="img/siklus2.jpg">
-
-<img src="img/hasil-kerja-siswa.jpg">
-
-<img src="img/video-pembelajaran.jpg">
-
-</div>
-
-</section>
-
-<!-- =========================
-CTA
-========================= -->
-
-<section class="cta-section">
-
-<div class="cta-box">
-
-<h2>
-Mari Jelajahi E-Portfolio PPG
-</h2>
-
-<p>
-
-Lihat dokumentasi pembelajaran, artefak,
-dan pengembangan kompetensi guru profesional.
-
-</p>
-
-<a href="profil.html" class="hero-btn">
-
-<i class="fa-solid fa-book-open"></i>
-
-Mulai Jelajahi
-
-</a>
-
-</div>
-
-</section>
-
-<!-- =========================
-FOOTER
-========================= -->
-
-<footer>
-
-<div class="footer-content">
-
-<div class="footer-box">
-
-<h3>E-Portfolio PPG</h3>
-
-<p>
-
-Website dokumentasi Program Pendidikan Profesi Guru
-yang menampilkan pembelajaran inovatif dan pengembangan kompetensi guru.
-
-</p>
-
-</div>
-
-<div class="footer-box">
-
-<h3>Menu Cepat</h3>
-
-<p><a href="profil.html">Profil</a></p>
-
-<p><a href="artefak.html">Artefak</a></p>
-
-<p><a href="lampiran.html">Lampiran</a></p>
-
-<p><a href="kontak.html">Kontak</a></p>
-
-</div>
-
-<div class="footer-box">
-
-<h3>Sosial Media</h3>
-
-<div class="social">
-
-<a href="#">
-<i class="fa-brands fa-facebook-f"></i>
-</a>
-
-<a href="#">
-<i class="fa-brands fa-instagram"></i>
-</a>
-
-<a href="#">
-<i class="fa-brands fa-youtube"></i>
-</a>
-
-<a href="#">
-<i class="fa-brands fa-tiktok"></i>
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="copyright">
-
-© 2026 E-Portfolio PPG Dewi Nur Ovilia
-
-</div>
-
-</footer>
+</script>
 
 </body>
 
